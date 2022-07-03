@@ -1,6 +1,7 @@
 #include <fstream>
 #include <iostream>
 using namespace std;
+
 int main(){
 	int x;
 	ifstream in_stream;

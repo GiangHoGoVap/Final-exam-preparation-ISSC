@@ -1,1 +1,1 @@
-// enter a number
+double x = 3.14159;
