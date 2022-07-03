@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 using namespace std;
+
 int find_char(char *string, char *pat){
 	if (*string == '\0' && *pat != '\0') 
         return false; 
@@ -23,10 +24,12 @@ bool contains(char *string, char *pat)
   
     // If current characters of pat and text match 
     if (*string == *pat) 
-        if(find_char(string, pat)) 
+    {
+        if (find_char(string, pat)) 
             return 1; 
         else
-          return contains(string + 1, pat); 
+            return contains(string + 1, pat); 
+    }
   
     // If current characters of pat and tex don't match 
     return contains(string + 1, pat); 
@@ -34,6 +37,6 @@ bool contains(char *string, char *pat)
 
 int main()
 {
-    cout << contains("nguyenminhtam","tam");
+    cout << contains("nguyenminhtam", "tam") << endl;
     return 0;
 }

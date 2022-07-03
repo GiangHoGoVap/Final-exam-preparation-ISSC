@@ -1,7 +1,7 @@
-#include <bits/stdc++.h> 
+#include <iostream> 
 using namespace std;
 
-int equals(int arr1[],int arr2[] , int n, int m){
+int equals(int arr1[], int arr2[] , int n, int m){
 	if (n != m) 
         return false; 
   
@@ -19,8 +19,8 @@ int equals(int arr1[],int arr2[] , int n, int m){
 } 
 
 int main(){
-	int arr1[]={1,2,3,4,5};
-	int arr2[]={2,3,4,5,1};
+	int arr1[] = {1,2,3,4,5};
+	int arr2[] = {2,3,4,5,1};
 	int n = sizeof(arr1)/sizeof(int);
 	int m = sizeof(arr2)/sizeof(int);
 	cout << "The size of two arrays: ";
@@ -28,20 +28,21 @@ int main(){
 	
 	if (n != m) return false;
 	
-	for (int i=0; i<n; i++){
-		cout << "Enter the first array: ";
+	for (int i = 0; i < n; i++){
+		cout << "Enter the first array element [" << i << "]: ";
 		cin >> arr1[i];
 	}
 	
-	for (int i=0; i<m; i++){
-		cout << "Enter the second array: ";
+	for (int i = 0; i < m; i++){
+		cout << "Enter the second array element [" << i << "]: ";
 		cin >> arr2[i];
 	}
 	
 	if (equals(arr1, arr2, n, m)) 
-        cout << "Same"; 
+        cout << "Same" << endl; 
     else
-        cout << "Different"; 
+        cout << "Different" << endl; 
+		
     return 0; 
 } 
 

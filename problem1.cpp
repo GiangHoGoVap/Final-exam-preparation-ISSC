@@ -32,16 +32,14 @@ int main(){
 	cin >> n;
 	
 	// Using 2 for loops to produce the asterisks
-	// Remember to delete the void in order to run 2 for loops
-	/*
-	 for (int i=1;i<=row;i++){
-		for (int j=1; j<=i;j++){
-			cout << "*" ;
+	for (int i = 1; i <= n; i++){
+		for (int j = 1; j <= i; j++){
+			cout << "* " ;
 		}
-			cout << "\n";
-	} */
+		cout << "\n";
+	} 
 	
-	
+    cout << endl;
 	printPattern(n);
 	return 0;
 }
